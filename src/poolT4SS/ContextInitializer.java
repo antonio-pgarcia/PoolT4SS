@@ -37,26 +37,27 @@ public class ContextInitializer implements ContextBuilder {
 		
 		int doublingTime = (Integer) p.getValue("doublingTime");
 		
+		int N = (int) ((XMAX * YMAX) * 0.05);
 		// Create the initial population
-		for (int i = 0; i < 500; i++) {
+		for (int i = 0; i < N; i++) {
 			VEColi vecoli = new VEColi();          
 			context.add(vecoli);                  
 		}
 		
 		// Create the initial population
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < N * 0.1; i++) {
 			VEColi vecoli = new VEColi(true,false);          
 			context.add(vecoli);                  
 		}
 		
 		// Create the initial population
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < N * 0.1; i++) {
 			VEColi vecoli = new VEColi(false,true);          
 			context.add(vecoli);                  
 		}
 			
 		// Create the initial population
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < N * 0.1; i++) {
 			VEColi vecoli = new VEColi(true,true);          
 			context.add(vecoli);                  
 		}
