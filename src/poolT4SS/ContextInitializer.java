@@ -13,19 +13,21 @@ import repast.simphony.valueLayer.GridValueLayer;
 
 @SuppressWarnings("rawtypes")
 public class ContextInitializer implements ContextBuilder {
-	private final static int XMAX = 100;
-	private final static int YMAX = 100;
+	private final static int XMAX = 150;
+	private final static int YMAX = 150;
 	private final static int GENERATIONS = 10;
 	
 	@SuppressWarnings({"unchecked" })
 	public Context build(Context context) {
+		int N = (int) ((XMAX * YMAX) * 0.05);
+		
 		RandomHelper.createNormal(0, 1);
 		GridFactoryFinder.createGridFactory(null).createGrid("grid-space", context,
 				new GridBuilderParameters<VEColi>(new repast.simphony.space.grid.WrapAroundBorders(),
 						new RandomGridAdder<VEColi>(), true, XMAX, YMAX));
 
 		ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null)
-		.createContinuousSpace("continuous-space", context, new AdderCFU<VEColi>(100,2),
+		.createContinuousSpace("continuous-space", context, new AdderCFU<VEColi>(N,4),
 				new repast.simphony.space.continuous.WrapAroundBorders(), XMAX, YMAX, 1);
 		
 		GridValueLayer vl = new GridValueLayer("substrate", true, 
@@ -37,9 +39,9 @@ public class ContextInitializer implements ContextBuilder {
 		
 		int doublingTime = (Integer) p.getValue("doublingTime");
 		
-		int N = (int) ((XMAX * YMAX) * 0.05);
+		System.out.println("N=" + N);
 		// Create the initial population
-		for (int i = 0; i < N; i++) {
+		for (int i = 0; i < N * 0.7; i++) {
 			VEColi vecoli = new VEColi();          
 			context.add(vecoli);                  
 		}

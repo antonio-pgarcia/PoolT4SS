@@ -13,7 +13,10 @@ the cheater plasmid P2 a competitive advantage eliminating the metabolic burden
 imposed by the conjugative pili expression. Therefore, the plasmid P2 could have a 
 better vertical transmission performance when compared to the original plasmid P1.
 
+## Setup download 
 
+The installation jav file can be found on [this link](https://goo.gl/jbAX5w).
+ 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
