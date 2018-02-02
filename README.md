@@ -15,7 +15,7 @@ better vertical transmission performance when compared to the original plasmid P
 
 ## Setup download 
 
-The installation jav file can be found on [this link](https://goo.gl/jbAX5w).
+The installation jar file can be found on [this link](https://goo.gl/jbAX5w).
  
 ## License
 
